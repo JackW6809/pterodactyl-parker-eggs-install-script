@@ -46,8 +46,8 @@ class NestSeeder extends Seeder
         $this->createRustNest(array_get($items, 'Rust'));
         ///Parkervcp Test
         $this->createAmongUsNest(array_get($items, 'Among Us'));
-        $this->createBeamMPNest(array_get($items, 'Beam MP'));
-        $this->createKissMPNest(array_get($items, 'Kiss MP'));
+        $this->createBeamMPNest(array_get($items, 'BeamMP'));
+        $this->createKissMPNest(array_get($items, 'KissMP'));
         $this->createBotsNest(array_get($items, 'Bots'));
         $this->createCallofDutyNest(array_get($items, 'Call of Duty'));
         $this->createCryoFallNest(array_get($items, 'CryoFall'));
