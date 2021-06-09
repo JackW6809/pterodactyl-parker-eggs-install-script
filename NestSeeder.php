@@ -47,7 +47,7 @@ class NestSeeder extends Seeder
         ///Parkervcp Test
         $this->createAmongUsNest(array_get($items, 'Among Us'));
         $this->createBeamMPNest(array_get($items, 'BeamMP'));
-        $this->createKissMPNest(array_get($items, 'KissMP'));
+        $this->createBeamNGNest(array_get($items, 'BeamNG'));
         $this->createBotsNest(array_get($items, 'Bots'));
         $this->createCallofDutyNest(array_get($items, 'Call of Duty'));
         $this->createCryoFallNest(array_get($items, 'CryoFall'));
@@ -160,7 +160,7 @@ class NestSeeder extends Seeder
         if (is_null($nest)) {
             $this->creationService->handle([
                 'name' => 'BeamMP',
-                'description' => 'BeamMP allows for stable servers, with a variety of servers located accross the globe.',
+                'description' => 'BeamMP - Allows for stable servers, with a variety of servers located accross the globe.',
             ], 'support@pterodactyl.io');
         }
     }
@@ -170,12 +170,12 @@ class NestSeeder extends Seeder
      *
      * @throws \Pterodactyl\Exceptions\Model\DataValidationException
      */
-    private function createKissMPNest(array $nest = null)
+    private function createBeamNGNest(array $nest = null)
     {
         if (is_null($nest)) {
             $this->creationService->handle([
                 'name' => 'BeamNG',
-                'description' => 'BeamNG.drive is an incredibly realistic driving game with near-limitless possibilities.',
+                'description' => 'BeamNG.drive - An incredibly realistic driving game with near-limitless possibilities.',
             ], 'support@pterodactyl.io');
         }
     }

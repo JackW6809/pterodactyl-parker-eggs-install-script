@@ -79,7 +79,7 @@ class EggSeeder extends Seeder
             'Rust',
             'Among Us',
             'BeamMP',
-            'KissMP',
+            'BeamNG',
             'Bots',
             'Call of Duty',
             'CryoFall',
