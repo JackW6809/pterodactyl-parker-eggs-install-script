@@ -3,7 +3,7 @@ if ! [ -x "$(command -v curl)" ]; then
     apt install -y curl
 fi
 cd /var/www/pterodactyl/database/Seeders
-rm NestSeeder.php
+rm NestSeeder.php EggSeeder.php
 curl -Lo data.zip https://github.com/JackW6809/pterodactyl-parker-eggs-install-script/releases/download/v1.0-beta/data.zip
 unzip -n data.zip
 rm data.zip
