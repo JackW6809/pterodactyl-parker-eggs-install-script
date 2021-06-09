@@ -95,6 +95,8 @@ class EggSeeder extends Seeder
             'OpenRA',
             'Red Dead Redemption',
             'Software',
+            'StarMade',
+            'Storage',
             'Teeworlds',
             'Terraria',
             'Tycoon Games',
