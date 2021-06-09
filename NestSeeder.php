@@ -44,7 +44,6 @@ class NestSeeder extends Seeder
         $this->createSourceEngineNest(array_get($items, 'Source Engine'));
         $this->createVoiceServersNest(array_get($items, 'Voice Servers'));
         $this->createRustNest(array_get($items, 'Rust'));
-        ///Parkervcp Test
         $this->createAmongUsNest(array_get($items, 'Among Us'));
         $this->createBeamMPNest(array_get($items, 'BeamMP'));
         $this->createBeamNGNest(array_get($items, 'BeamNG'));
@@ -134,7 +133,6 @@ class NestSeeder extends Seeder
         }
     }
 
-    ///Parkervcp Test
     /**
      * Create the Among Us nest to be used later on.
      *
