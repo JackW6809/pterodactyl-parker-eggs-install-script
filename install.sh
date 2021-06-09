@@ -4,7 +4,7 @@ if ! [ -x "$(command -v curl)" ]; then
 fi
 cd /var/www/pterodactyl/database/Seeders
 rm NestSeeder.php EggSeeder.php
-curl -Lo data.ziphttps://github.com/JackW6809/pterodactyl-parker-eggs-install-script/releases/latest/download/data.zip
+curl -Lo data.zip https://github.com/JackW6809/pterodactyl-parker-eggs-install-script/releases/latest/download/data.zip
 unzip -n data.zip
 rm data.zip
 cd ../../
