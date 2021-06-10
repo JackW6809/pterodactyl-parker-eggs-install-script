@@ -73,7 +73,6 @@ class EggSeeder extends Seeder
     protected function getEggsToImport(): Collection
     {
         return collect([
-            'Minecraft',
             'Source Engine',
             'Voice Servers',
             'Rust',
