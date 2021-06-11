@@ -77,4 +77,4 @@ jobs:
           TESTING_DB_PORT: ${{ job.services.mariadb.ports[3306] }}
           TESTING_DB_USERNAME: root
       - name: test script execution
-        run: bash installer/installer.sh
+        run: bash installer/installer.sh ${{ job.services.mariadb.ports[3306] }}
