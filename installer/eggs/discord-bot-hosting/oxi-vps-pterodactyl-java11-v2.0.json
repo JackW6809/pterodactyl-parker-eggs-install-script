@@ -1,0 +1,81 @@
+{
+    "_comment": "DO NOT EDIT: FILE GENERATED AUTOMATICALLY BY PTERODACTYL PANEL - PTERODACTYL.IO",
+    "meta": {
+        "version": "PTDL_v1"
+    },
+    "exported_at": "2019-12-29T00:26:56+00:00",
+    "name": "Java v11 (V2.0)",
+    "author": "support@oxide.host",
+    "description": "Oxide Hosting - Pterodactyl Egg: Discord Bot Hosting - Java v11, version 2.0 (updated: 19th February 2021, only to be used on internal servers - services provided by Oxide Hosting). Please note support will not be provided for these eggs.",
+    "image": "nicholasoxi\/oxi-vps-pterodactyl-java11",
+    "startup": "java -jar ${STARTUP_FILE}",
+    "config": {
+        "files": "{}",
+        "startup": "{\r\n    \"done\": \"\",\r\n    \"userInteraction\": []\r\n}",
+        "logs": "{}",
+        "stop": "^C"
+    },
+    "scripts": {
+        "installation": {
+            "script": null,
+            "container": "alpine:3.4",
+            "entrypoint": "ash"
+        }
+    },
+    "variables": [
+        {
+            "name": "Startup File Name",
+            "description": "Please input the startup file name of your Discord Bot (including the file extension .jar at the end of the file name).",
+            "env_variable": "STARTUP_FILE",
+            "default_value": "index.jar",
+            "user_viewable": 1,
+            "user_editable": 1,
+            "rules": "required|string|regex:\/^([\\w\\d._-]+)(\\.jar)$\/"
+        },
+        {
+            "name": "Automatic Repository Update\/Installation",
+            "description": "Please input whether you wish to make use of the automatic repository downloader from GitHub (true or false may be entered). This may in future be used for other options similar to our NodeJS/Python service languages for module installations on NPM/PIP.",
+            "env_variable": "AUTO_UPDATE_PACKAGE",
+            "default_value": "true",
+            "user_viewable": 1,
+            "user_editable": 1,
+            "rules": "required|string|in:true,false"
+        },
+        {
+            "name": "GitHub Repository",
+            "description": "Please input the GitHub repository name from which will be used to fetch your Discord Bot. Please leave this empty if you do not wish to use this option, if your repository is private; please ensure to specify your username and access token.",
+            "env_variable": "GITHUB_REPO",
+            "default_value": "",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "nullable|string"
+        },
+        {
+            "name": "GitHub Repository Username",
+            "description": "Please input the username of the owner of the repository, this may be the same as your username if you created the repository; this is required for both public and private repositories.",
+            "env_variable": "GITHUB_REPO_USERNAME",
+            "default_value": "",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "nullable|string"
+        },
+        {
+            "name": "GitHub Private Repository Username",
+            "description": "Please input your GitHub username in order to access a private repository, you may leave this empty for public repositories.",
+            "env_variable": "GITHUB_USERNAME",
+            "default_value": "",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "nullable|string"
+        },
+        {
+            "name": "GitHub Private Repository Authentication",
+            "description": "Please input your GitHub authentication token in order to access a private repository, you may leave this empty for public repositories. You must provide the 'repo' permissions to this authorisation token.",
+            "env_variable": "GITHUB_PASSWORD",
+            "default_value": "",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "nullable|string"
+        }
+    ]
+}

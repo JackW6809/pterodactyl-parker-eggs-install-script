@@ -1,0 +1,90 @@
+{
+    "_comment": "DO NOT EDIT: FILE GENERATED AUTOMATICALLY BY PTERODACTYL PANEL - PTERODACTYL.IO",
+    "meta": {
+        "version": "PTDL_v1"
+    },
+    "exported_at": "2020-04-10T19:45:56+01:00",
+    "name": "Python v3.8 (V2.0)",
+    "author": "support@oxide.host",
+    "description": "Oxide Hosting - Pterodactyl Egg: Discord Bot Hosting - Python v3.8, version 2.0 (updated: 19th February 2021, only to be used on internal servers - services provided by Oxide Hosting). Please note support will not be provided for these eggs.",
+    "image": "nicholasoxi\/oxi-vps-pterodactyl-py3.8",
+    "startup": "python3 ${STARTUP_FILE}",
+    "config": {
+        "files": "{}",
+        "startup": "{\r\n    \"done\": \"\",\r\n    \"userInteraction\": []\r\n}",
+        "logs": "{}",
+        "stop": "^C"
+    },
+    "scripts": {
+        "installation": {
+            "script": null,
+            "container": "alpine:3.4",
+            "entrypoint": "ash"
+        }
+    },
+    "variables": [
+        {
+            "name": "Startup File Name",
+            "description": "Please input the startup file name of your Discord Bot (including the file extension .py at the end of the file name).",
+            "env_variable": "STARTUP_FILE",
+            "default_value": "index.py",
+            "user_viewable": 1,
+            "user_editable": 1,
+            "rules": "required|string|regex:\/^([\\w\\d._-]+)(\\.py)$\/"
+        },
+        {
+            "name": "Additional PIP Modules",
+            "description": "Please input any additional PIP modules your Discord Bot may require (using the following format as an example: discord.py python-dotenv), list all modules separated by a space; if you use this input, 'requirements.txt' will not be used to install modules.",
+            "env_variable": "ADDITIONAL_PIP_MODULES",
+            "default_value": "",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "nullable|string"
+        },
+        {
+            "name": "Automatic Package Update\/Installation",
+            "description": "Please input whether you wish to auto-install\/update modules listed within the file 'requirements.txt' or within the 'Additional PIP Modules' variable (true or false may be entered). This will also disable\/enable Git support and an auto-updater for PIP.",
+            "env_variable": "AUTO_UPDATE_PACKAGE",
+            "default_value": "true",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "required|string|in:true,false"
+        },
+        {
+            "name": "GitHub Repository",
+            "description": "Please input the GitHub repository name from which will be used to fetch your Discord Bot. Please leave this empty if you do not wish to use this option, if your repository is private; please ensure to specify your username and access token.",
+            "env_variable": "GITHUB_REPO",
+            "default_value": "",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "nullable|string"
+        },
+        {
+            "name": "GitHub Repository Username",
+            "description": "Please input the username of the owner of the repository, this may be the same as your username if you created the repository; this is required for both public and private repositories.",
+            "env_variable": "GITHUB_REPO_USERNAME",
+            "default_value": "",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "nullable|string"
+        },
+        {
+            "name": "GitHub Private Repository Username",
+            "description": "Please input your GitHub username in order to access a private repository, you may leave this empty for public repositories.",
+            "env_variable": "GITHUB_USERNAME",
+            "default_value": "",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "nullable|string"
+        },
+        {
+            "name": "GitHub Private Repository Authentication",
+            "description": "Please input your GitHub authentication token in order to access a private repository, you may leave this empty for public repositories. You must provide the 'repo' permissions to this authorisation token.",
+            "env_variable": "GITHUB_PASSWORD",
+            "default_value": "",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "nullable|string"
+        }
+    ]
+}
