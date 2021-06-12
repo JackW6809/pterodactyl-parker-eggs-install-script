@@ -73,7 +73,36 @@ class EggSeeder extends Seeder
     protected function getEggsToImport(): Collection
     {
         return collect([
-            'Discord Bot Hosting',
+            'Source Engine',
+            'Voice Servers',
+            'Rust',
+            'Among Us',
+            'BeamMP',
+            'BeamNG',
+            'Bots',
+            'Call of Duty',
+            'CryoFall',
+            'Database',
+            'Enemy Territory',
+            'Factorio',
+            'Faster Than Light',
+            'Grand Theft Auto',
+            'League Sandbox',
+            'Mindustry',
+            'Minetest',
+            'Openarena',
+            'OpenRA',
+            'Red Dead Redemption',
+            'Software',
+            'StarMade',
+            'Storage',
+            'Teeworlds',
+            'Terraria',
+            'Tycoon Games',
+            'Unreal Engine',
+            'Veloren',
+            'Vintage Story',
+            'Xonotic',
         ]);
     }
 
@@ -85,7 +114,7 @@ class EggSeeder extends Seeder
     private function findMatchingNest(string $nestName): Nest
     {
         return $this->nestRepository->findFirstWhere([
-            ['author', '=', 'support@oxide.host'],
+            ['author', '=', 'support@pterodactyl.io'],
             ['name', '=', $nestName],
         ]);
     }
