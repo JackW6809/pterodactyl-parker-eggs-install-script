@@ -14,4 +14,3 @@ rm data.zip
 php ../../artisan migrate --seed --force
 mv temp/NestSeeder.php temp/EggSeeder.php .
 rm -rf temp/
-
